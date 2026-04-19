@@ -1,0 +1,2384 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>寵物溝通創業弟子班 · 本期候補說明</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1614;
+    --ink-soft: #3a322e;
+    --ink-faint: #6b5d54;
+    --paper: #f4ede0;
+    --paper-warm: #ebe1ce;
+    --paper-deep: #e0d3b8;
+    --vermillion: #b8361f;
+    --vermillion-deep: #8a2616;
+    --gold: #a07a2c;
+    --seal: #c1392b;
+    --line: rgba(26, 22, 20, 0.15);
+    --line-strong: rgba(26, 22, 20, 0.4);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Serif TC', serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.75;
+    font-weight: 400;
+    background-image:
+      radial-gradient(ellipse at top left, rgba(184, 54, 31, 0.04), transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(160, 122, 44, 0.05), transparent 50%);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 0.18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.4;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 100px 0 80px;
+    position: relative;
+  }
+
+  .hero-mark {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .hero-mark-line { flex: 1; height: 1px; background: var(--line-strong); }
+
+  .hero-mark-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .hero-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--vermillion);
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-title {
+    font-size: 62px;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+    color: var(--ink);
+  }
+
+  .hero-title .red {
+    color: var(--vermillion);
+    font-style: italic;
+    font-weight: 500;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 580px;
+    line-height: 1.85;
+    margin-bottom: 48px;
+  }
+
+  /* ===== HERO PRICE STACK ===== */
+  .hero-price {
+    padding: 24px 0 32px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 24px;
+  }
+
+  .hero-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+
+  .hero-price-row .label {
+    color: var(--ink-faint);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .hero-price-row .value {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .hero-price-row.strike .value {
+    color: var(--ink-faint);
+    text-decoration: line-through;
+    font-weight: 400;
+  }
+
+  .hero-price-row.discount {
+    color: var(--vermillion);
+    border-top: 1px dashed var(--line);
+    border-bottom: 1px dashed var(--line);
+    margin: 6px 0;
+  }
+
+  .hero-price-row.discount .label { color: var(--vermillion); }
+  .hero-price-row.discount .value { color: var(--vermillion); font-weight: 700; }
+
+  .hero-price-row.final {
+    padding-top: 16px;
+  }
+
+  .hero-price-row.final .label {
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: var(--ink);
+    font-weight: 700;
+    font-family: 'Noto Serif TC', serif;
+    text-transform: none;
+  }
+
+  .hero-price-row.final .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: var(--vermillion);
+    font-style: italic;
+  }
+
+  .hero-price-row.final .value .nt {
+    font-size: 15px;
+    font-family: 'JetBrains Mono', monospace;
+    font-style: normal;
+    color: var(--ink-faint);
+    margin-right: 6px;
+    font-weight: 400;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .hero-meta-item { display: flex; flex-direction: column; gap: 4px; }
+
+  .hero-meta-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .hero-meta-value { font-size: 15px; font-weight: 600; color: var(--ink); }
+  .hero-meta-value.red { color: var(--vermillion); }
+
+  .seal {
+    position: absolute;
+    top: 100px;
+    right: 32px;
+    width: 110px;
+    height: 110px;
+    border: 3px solid var(--seal);
+    background: rgba(193, 57, 43, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-8deg);
+    color: var(--seal);
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+    text-align: center;
+    box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--seal);
+  }
+
+  .seal::before {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border: 1px solid var(--seal);
+    opacity: 0.4;
+  }
+
+  /* ===== NOTICE BANNER ===== */
+  .notice {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 22px 32px;
+    margin: 48px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    border-left: 4px solid var(--vermillion);
+  }
+
+  .notice::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(244, 237, 224, 0.03) 10px, rgba(244, 237, 224, 0.03) 20px);
+    pointer-events: none;
+  }
+
+  .notice-icon {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--vermillion);
+    position: relative;
+  }
+
+  .notice-text {
+    flex: 1;
+    font-size: 15px;
+    line-height: 1.6;
+    position: relative;
+    opacity: 0.95;
+  }
+
+  .notice-text strong { color: var(--vermillion); font-weight: 700; letter-spacing: 0.02em; }
+
+  /* ===== WAITLIST CALLOUT ===== */
+  .waitlist-box {
+    margin: 36px 0 0;
+    padding: 32px 40px;
+    background: linear-gradient(135deg, rgba(184, 54, 31, 0.08), rgba(160, 122, 44, 0.06));
+    border: 2px solid var(--vermillion);
+    position: relative;
+  }
+
+  .waitlist-box::before {
+    content: '候補';
+    position: absolute;
+    top: -16px;
+    left: 32px;
+    background: var(--vermillion);
+    color: var(--paper);
+    padding: 4px 14px;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+  }
+
+  .waitlist-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-top: 6px;
+    margin-bottom: 14px;
+  }
+
+  .waitlist-desc {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.85;
+  }
+
+  .waitlist-desc strong { color: var(--vermillion); }
+
+  /* ===== SECTION ===== */
+  section {
+    padding: 64px 0;
+    border-top: 1px solid var(--line);
+    position: relative;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .section-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 78px;
+    font-weight: 300;
+    line-height: 0.9;
+    color: var(--vermillion);
+    font-style: italic;
+  }
+
+  .section-title-block { flex: 1; padding-bottom: 8px; }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 6px;
+  }
+
+  .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  .section-intro {
+    font-size: 17px;
+    color: var(--ink-soft);
+    line-height: 1.85;
+    margin-bottom: 28px;
+    max-width: 680px;
+  }
+
+  /* ===== VIDEO ===== */
+  .video-wrap {
+    position: relative;
+    padding-top: 56.25%;
+    margin: 24px 0 32px;
+    background: var(--ink);
+    border: 1px solid var(--line-strong);
+    box-shadow: 0 8px 32px rgba(26, 22, 20, 0.15);
+  }
+
+  .video-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .video-note {
+    font-size: 13px;
+    color: var(--ink-faint);
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 32px;
+    text-align: right;
+    letter-spacing: 0.02em;
+  }
+
+  /* ===== CHAPTERS ===== */
+  .chapters-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--vermillion);
+    margin-bottom: 16px;
+  }
+
+  .chapters {
+    margin: 0 0 40px;
+    padding: 24px 28px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--line);
+  }
+
+  .chapter-item {
+    display: flex;
+    gap: 20px;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: 14.5px;
+    align-items: baseline;
+    line-height: 1.65;
+  }
+
+  .chapter-item:last-child { border-bottom: none; }
+
+  .chapter-time {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--vermillion);
+    font-weight: 500;
+    min-width: 68px;
+  }
+
+  .chapter-name {
+    color: var(--ink);
+    flex: 1;
+  }
+
+  /* ===== KEY TAKEAWAYS ===== */
+  .takeaways {
+    margin: 32px 0;
+    padding: 40px 44px;
+    background: linear-gradient(135deg, rgba(184, 54, 31, 0.05), rgba(160, 122, 44, 0.04));
+    border: 1px solid var(--line-strong);
+    position: relative;
+  }
+
+  .takeaways-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--vermillion);
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+
+  .takeaways-heading {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 24px;
+  }
+
+  .takeaway-item {
+    display: flex;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px dashed var(--line);
+  }
+
+  .takeaway-item:last-child { border-bottom: none; }
+
+  .takeaway-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 28px;
+    color: var(--vermillion);
+    line-height: 1;
+    min-width: 36px;
+  }
+
+  .takeaway-text {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+    flex: 1;
+  }
+
+  .takeaway-text strong { color: var(--ink); }
+
+  /* ===== AUTHORITY ===== */
+  .authority-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 24px 0;
+  }
+
+  .authority-card {
+    padding: 28px 30px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--line-strong);
+    border-top: 3px solid var(--vermillion);
+    position: relative;
+  }
+
+  .authority-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--vermillion);
+    margin-bottom: 8px;
+  }
+
+  .authority-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .authority-desc {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  /* ===== STAGES ===== */
+  .stages { margin: 24px 0; }
+
+  .stage-row {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 28px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+  }
+
+  .stage-row:last-child { border-bottom: none; }
+
+  .stage-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 54px;
+    line-height: 1;
+    color: var(--vermillion);
+    font-weight: 300;
+  }
+
+  .stage-body { flex: 1; }
+
+  .stage-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
+  }
+
+  .stage-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 10px;
+  }
+
+  .stage-content {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+  }
+
+  .stage-content strong { color: var(--vermillion); }
+
+  /* ===== MONTHLY TRAINING ===== */
+  .monthly {
+    margin: 24px 0 0;
+    padding: 40px 44px;
+    background: var(--ink);
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .monthly::before {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -15%;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, rgba(160, 122, 44, 0.18), transparent 70%);
+    pointer-events: none;
+  }
+
+  .monthly-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--vermillion);
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .monthly-heading {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--paper);
+    margin-bottom: 14px;
+    position: relative;
+    letter-spacing: 0.01em;
+  }
+
+  .monthly-intro {
+    font-size: 15px;
+    line-height: 1.85;
+    color: rgba(244, 237, 224, 0.85);
+    margin-bottom: 28px;
+    position: relative;
+    max-width: 580px;
+  }
+
+  .monthly-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    position: relative;
+  }
+
+  .monthly-item {
+    padding: 18px 18px;
+    background: rgba(244, 237, 224, 0.06);
+    border-left: 2px solid var(--vermillion);
+    font-size: 14px;
+  }
+
+  .monthly-item-title {
+    font-weight: 700;
+    color: var(--paper);
+    margin-bottom: 4px;
+    letter-spacing: 0.02em;
+  }
+
+  .monthly-item-desc {
+    font-size: 12.5px;
+    color: rgba(244, 237, 224, 0.65);
+    line-height: 1.6;
+  }
+
+  /* ===== FIT GRID ===== */
+  .fit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 24px 0;
+  }
+
+  .fit-box {
+    padding: 32px 28px;
+    border: 1px solid var(--line-strong);
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .fit-box.yes {
+    border-top: 3px solid var(--gold);
+    background: rgba(160, 122, 44, 0.04);
+  }
+
+  .fit-box.no {
+    border-top: 3px solid var(--ink);
+    background: rgba(26, 22, 20, 0.04);
+  }
+
+  .fit-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+
+  .fit-box.yes .fit-mark { color: var(--gold); }
+  .fit-box.no .fit-mark { color: var(--ink-faint); }
+
+  .fit-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 20px;
+  }
+
+  .fit-list { list-style: none; }
+
+  .fit-list li {
+    padding: 12px 0;
+    padding-left: 24px;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    border-bottom: 1px dashed var(--line);
+  }
+
+  .fit-list li:last-child { border-bottom: none; }
+
+  .fit-list li::before {
+    position: absolute;
+    left: 0;
+    top: 13px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .fit-box.yes .fit-list li::before { content: '✓'; color: var(--gold); }
+  .fit-box.no .fit-list li::before { content: '×'; color: var(--ink); }
+
+  /* ===== PRICE ===== */
+  .price-wrap {
+    margin: 24px 0;
+    padding: 44px 48px;
+    background: var(--ink);
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .price-wrap::before {
+    content: '';
+    position: absolute;
+    top: -60%;
+    right: -20%;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(184, 54, 31, 0.22), transparent 70%);
+    pointer-events: none;
+  }
+
+  .price-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--vermillion);
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  .price-label {
+    font-size: 17px;
+    color: rgba(244, 237, 224, 0.75);
+    margin-bottom: 18px;
+    position: relative;
+  }
+
+  /* Price breakdown stack inside price-wrap */
+  .price-stack {
+    margin: 16px 0 32px;
+    padding: 22px 0;
+    border-top: 1px solid rgba(244, 237, 224, 0.15);
+    border-bottom: 1px solid rgba(244, 237, 224, 0.15);
+    position: relative;
+  }
+
+  .price-stack-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 0;
+    font-size: 16px;
+    color: rgba(244, 237, 224, 0.8);
+  }
+
+  .price-stack-row.strike .value {
+    text-decoration: line-through;
+    color: rgba(244, 237, 224, 0.5);
+  }
+
+  .price-stack-row.discount {
+    color: var(--vermillion);
+    font-weight: 700;
+  }
+
+  .price-stack-row.discount .value { color: var(--vermillion); }
+
+  .price-stack-row.final {
+    padding-top: 20px;
+    margin-top: 10px;
+    border-top: 1px dashed rgba(244, 237, 224, 0.25);
+  }
+
+  .price-stack-row.final .label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--paper);
+    letter-spacing: 0.02em;
+  }
+
+  .price-amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 68px;
+    font-weight: 500;
+    color: var(--paper);
+    font-style: italic;
+    line-height: 1;
+    position: relative;
+  }
+
+  .price-amount .nt {
+    font-size: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-style: normal;
+    color: var(--vermillion);
+    margin-right: 10px;
+    font-weight: 400;
+  }
+
+  .price-methods {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    position: relative;
+  }
+
+  .method-card {
+    padding: 22px 22px;
+    background: rgba(244, 237, 224, 0.06);
+    border-left: 3px solid var(--vermillion);
+  }
+
+  .method-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--paper);
+    margin-bottom: 12px;
+  }
+
+  .method-detail {
+    font-size: 13px;
+    color: rgba(244, 237, 224, 0.78);
+    line-height: 1.75;
+  }
+
+  .method-detail strong { color: var(--vermillion); }
+
+  .method-region {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+
+  /* ===== INSTALLMENT TABLE ===== */
+  .install-wrap {
+    margin: 36px 0;
+    padding: 36px 32px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--line-strong);
+  }
+
+  .install-title-block { text-align: center; margin-bottom: 8px; }
+
+  .install-title-block .lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-faint);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .install-title-block .main {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-top: 4px;
+  }
+
+  .install-principal {
+    text-align: center;
+    margin: 16px 0 28px;
+    padding: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-faint);
+  }
+
+  .install-principal strong {
+    color: var(--vermillion);
+    font-size: 16px;
+  }
+
+  .install-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  .install-table th {
+    background: var(--gold);
+    color: var(--paper);
+    padding: 14px;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+  .install-table td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px dashed var(--line);
+    color: var(--ink);
+  }
+
+  .install-table td:first-child { font-weight: 700; color: var(--vermillion); }
+
+  .install-table td:nth-child(2) {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .install-table td:last-child { color: var(--ink-faint); font-size: 13px; }
+
+  .install-table tr:hover td { background: rgba(160, 122, 44, 0.05); }
+  .install-table tr:last-child td { border-bottom: none; }
+
+  .install-note {
+    margin-top: 24px;
+    padding: 16px 20px;
+    background: rgba(184, 54, 31, 0.06);
+    border-left: 3px solid var(--vermillion);
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+  }
+
+  .install-note strong { color: var(--vermillion); }
+
+  /* ===== REFUND ===== */
+  .refund-box {
+    margin: 24px 0;
+    padding: 32px 36px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--line-strong);
+    border-left: 4px solid var(--vermillion);
+  }
+
+  .refund-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 20px;
+  }
+
+  .refund-stage {
+    padding: 20px 22px;
+    border: 1px solid var(--line);
+    background: rgba(244, 237, 224, 0.3);
+  }
+
+  .refund-stage.ok { border-color: var(--gold); background: rgba(160, 122, 44, 0.05); }
+  .refund-stage.no { border-color: var(--vermillion); background: rgba(184, 54, 31, 0.05); }
+
+  .refund-status {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .refund-stage.ok .refund-status { color: var(--gold); }
+  .refund-stage.no .refund-status { color: var(--vermillion); }
+
+  .refund-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  .refund-desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  /* ===== FLOW ===== */
+  .flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 24px 0;
+  }
+
+  .flow-item {
+    display: flex;
+    gap: 28px;
+    padding: 24px 0;
+    position: relative;
+  }
+
+  .flow-item:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 60px;
+    bottom: -20px;
+    width: 1px;
+    background: var(--line-strong);
+  }
+
+  .flow-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 2px solid var(--vermillion);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--vermillion);
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+  }
+
+  .flow-item.final .flow-dot {
+    background: var(--vermillion);
+    color: var(--paper);
+  }
+
+  .flow-content {
+    flex: 1;
+    padding-top: 4px;
+  }
+
+  .flow-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+
+  .flow-desc {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  .flow-desc strong { color: var(--vermillion); }
+
+  /* ===== COUPON HIGHLIGHT (折價券獲得感) ===== */
+  .coupon-box {
+    margin: 0 0 40px;
+    padding: 48px 48px 44px;
+    background: linear-gradient(135deg, var(--vermillion), var(--vermillion-deep));
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .coupon-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 16px, rgba(244, 237, 224, 0.04) 16px, rgba(244, 237, 224, 0.04) 32px);
+    pointer-events: none;
+  }
+
+  .coupon-box::after {
+    content: '◆';
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    font-size: 22px;
+    color: rgba(244, 237, 224, 0.4);
+  }
+
+  .coupon-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: rgba(244, 237, 224, 0.75);
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .coupon-title {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.3;
+    margin-bottom: 24px;
+    position: relative;
+    letter-spacing: -0.01em;
+  }
+
+  .coupon-calc {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: 24px 0;
+    border-top: 1px solid rgba(244, 237, 224, 0.18);
+    border-bottom: 1px solid rgba(244, 237, 224, 0.18);
+    position: relative;
+  }
+
+  .coupon-calc-cell { text-align: center; }
+
+  .coupon-calc-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(244, 237, 224, 0.65);
+    margin-bottom: 6px;
+  }
+
+  .coupon-calc-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--paper);
+    line-height: 1;
+  }
+
+  .coupon-calc-value.strike {
+    text-decoration: line-through;
+    color: rgba(244, 237, 224, 0.55);
+  }
+
+  .coupon-calc-value.highlight {
+    color: var(--paper);
+    font-size: 38px;
+    text-shadow: 0 0 20px rgba(244, 237, 224, 0.3);
+  }
+
+  .coupon-calc-op {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    color: rgba(244, 237, 224, 0.65);
+    font-style: italic;
+  }
+
+  .coupon-how {
+    margin-top: 28px;
+    font-size: 15px;
+    line-height: 1.85;
+    color: rgba(244, 237, 224, 0.92);
+    position: relative;
+  }
+
+  .coupon-how strong { color: var(--paper); font-weight: 700; }
+
+  /* ===== FORM COPY BLOCK ===== */
+  .form-wrap {
+    margin: 32px 0 40px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid var(--line-strong);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .form-header {
+    padding: 20px 28px;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .form-header-title {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .form-header-title .sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-style: italic;
+    color: rgba(244, 237, 224, 0.65);
+    margin-left: 10px;
+    letter-spacing: 0.05em;
+  }
+
+  .copy-btn {
+    padding: 10px 22px;
+    background: var(--vermillion);
+    color: var(--paper);
+    border: none;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .copy-btn:hover {
+    background: var(--paper);
+    color: var(--vermillion);
+  }
+
+  .copy-btn.copied {
+    background: #4a6b3d;
+    color: var(--paper);
+  }
+
+  .copy-btn.copied:hover {
+    background: #4a6b3d;
+    color: var(--paper);
+  }
+
+  .form-body {
+    padding: 32px 36px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13.5px;
+    line-height: 1.85;
+    color: var(--ink);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background: rgba(244, 237, 224, 0.4);
+  }
+
+  .form-body .hl {
+    color: var(--vermillion);
+    font-weight: 700;
+  }
+
+  .form-body .sec {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 4px;
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  .form-note {
+    padding: 20px 28px;
+    background: rgba(184, 54, 31, 0.06);
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+  }
+
+  .form-note strong { color: var(--vermillion); }
+
+  /* ===== DATA SAFETY BOX ===== */
+  .data-safety {
+    margin: 24px 0;
+    padding: 24px 28px;
+    background: rgba(160, 122, 44, 0.06);
+    border: 1px solid var(--gold);
+    border-left: 4px solid var(--gold);
+  }
+
+  .data-safety-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .data-safety-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .data-safety-desc {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    line-height: 1.75;
+  }
+
+  .data-safety-desc strong { color: var(--vermillion); }
+
+  /* ===== FAQ ===== */
+  .faq-item {
+    margin: 16px 0;
+    padding: 24px 28px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--vermillion);
+  }
+
+  .faq-q {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 12px;
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+  }
+
+  .faq-q-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 24px;
+    color: var(--vermillion);
+    line-height: 1;
+  }
+
+  .faq-a {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.8;
+    padding-left: 30px;
+  }
+
+  .faq-a strong { color: var(--vermillion); }
+
+  /* ===== CTA ===== */
+  .cta-wrap {
+    margin: 64px 0 48px;
+    padding: 56px 48px;
+    background: linear-gradient(135deg, var(--vermillion), var(--vermillion-deep));
+    color: var(--paper);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(244, 237, 224, 0.03) 20px, rgba(244, 237, 224, 0.03) 40px);
+    pointer-events: none;
+  }
+
+  .cta-eyebrow {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: rgba(244, 237, 224, 0.85);
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+    position: relative;
+  }
+
+  .cta-title {
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    position: relative;
+    letter-spacing: -0.01em;
+  }
+
+  .cta-desc {
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 560px;
+    margin: 0 auto 36px;
+    color: rgba(244, 237, 224, 0.9);
+    position: relative;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 20px 52px;
+    background: var(--paper);
+    color: var(--vermillion);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    border: 2px solid var(--paper);
+    transition: all 0.3s ease;
+    position: relative;
+    font-family: 'Noto Serif TC', serif;
+  }
+
+  .cta-button:hover {
+    background: transparent;
+    color: var(--paper);
+  }
+
+  .cta-note {
+    margin-top: 24px;
+    font-size: 13px;
+    color: rgba(244, 237, 224, 0.7);
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 0.03em;
+    position: relative;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    margin-top: 40px;
+    padding: 48px 0 64px;
+    border-top: 2px solid var(--ink);
+    text-align: center;
+  }
+
+  .footer-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 28px;
+    color: var(--vermillion);
+    margin-bottom: 12px;
+  }
+
+  .footer-text {
+    font-size: 14px;
+    color: var(--ink-faint);
+    letter-spacing: 0.05em;
+    line-height: 1.85;
+  }
+
+  .footer-version {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    margin-top: 24px;
+    letter-spacing: 0.15em;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow { animation: fadeUp 0.8s ease 0.1s both; }
+  .hero-title { animation: fadeUp 0.8s ease 0.2s both; }
+  .hero-subtitle { animation: fadeUp 0.8s ease 0.3s both; }
+  .hero-price { animation: fadeUp 0.8s ease 0.4s both; }
+  .hero-meta { animation: fadeUp 0.8s ease 0.5s both; }
+  .notice { animation: fadeUp 0.8s ease 0.6s both; }
+  .waitlist-box { animation: fadeUp 0.8s ease 0.7s both; }
+  .seal { animation: fadeUp 1s ease 0.5s both; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 720px) {
+    .container { padding: 0 20px; }
+    .hero { padding: 60px 0 50px; }
+    .hero-title { font-size: 40px; }
+    .hero-subtitle { font-size: 16px; }
+    .hero-meta { gap: 24px; }
+    .seal { width: 78px; height: 78px; font-size: 15px; top: 60px; right: 20px; }
+    .hero-price-row.final .value { font-size: 28px; }
+    .waitlist-box { padding: 24px 22px; }
+    .waitlist-title { font-size: 19px; }
+    .section-header { gap: 16px; margin-bottom: 32px; }
+    .section-number { font-size: 54px; }
+    .section-title { font-size: 24px; }
+    .authority-list { grid-template-columns: 1fr; }
+    .fit-grid { grid-template-columns: 1fr; }
+    .refund-split { grid-template-columns: 1fr; }
+    .price-methods { grid-template-columns: 1fr; }
+    .price-wrap { padding: 32px 28px; }
+    .price-amount { font-size: 52px; }
+    .price-amount .nt { font-size: 20px; }
+    .notice { padding: 16px 20px; flex-direction: column; align-items: flex-start; gap: 10px; }
+    .takeaways { padding: 28px 24px; }
+    .stage-row { grid-template-columns: 56px 1fr; gap: 16px; }
+    .stage-num { font-size: 40px; }
+    .stage-title { font-size: 18px; }
+    .monthly { padding: 28px 24px; }
+    .monthly-heading { font-size: 22px; }
+    .monthly-grid { grid-template-columns: 1fr 1fr; }
+    .cta-wrap { padding: 40px 28px; }
+    .cta-title { font-size: 26px; }
+    .cta-button { padding: 16px 36px; font-size: 16px; }
+    .chapters { padding: 18px 20px; }
+    .chapter-item { gap: 14px; font-size: 13.5px; padding: 10px 0; }
+    .chapter-time { min-width: 52px; font-size: 12px; }
+    .faq-item { padding: 20px 22px; }
+    .faq-a { padding-left: 0; }
+    .install-wrap { padding: 24px 16px; }
+    .install-table { font-size: 12px; }
+    .install-table th, .install-table td { padding: 10px 6px; }
+    .install-table td:nth-child(2) { font-size: 15px; }
+    .coupon-box { padding: 32px 26px; }
+    .coupon-title { font-size: 24px; }
+    .coupon-calc { grid-template-columns: 1fr; gap: 8px; padding: 18px 0; }
+    .coupon-calc-op { font-size: 18px; transform: rotate(90deg); }
+    .coupon-calc-value { font-size: 22px; }
+    .coupon-calc-value.highlight { font-size: 30px; }
+    .form-header { padding: 16px 20px; flex-direction: column; align-items: flex-start; }
+    .form-body { padding: 22px 20px; font-size: 12.5px; }
+    .copy-btn { width: 100%; text-align: center; }
+    section { padding: 48px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="hero-mark">
+      <span class="hero-mark-text">LUNA · 異人研究院</span>
+      <div class="hero-mark-line"></div>
+      <span class="hero-mark-text">本期候補 / 2026</span>
+    </div>
+
+    <div class="hero-eyebrow">For those still considering.</div>
+    <h1 class="hero-title">本期已滿，<br>開放 <span class="red">五位候補</span> 名額。</h1>
+    <p class="hero-subtitle">
+      這一頁是給錯過說明會、但仍想把寵物溝通認真學起來的人。<br>
+      本期名額已收滿，但 Luna 會在入班後篩選適合度，<br>
+      不合適者會被勸退、釋出名額。<br>
+      <strong>彈性收徒五位</strong>將從候補名單依序補入。
+    </p>
+
+    <div class="hero-price">
+      <div class="hero-price-row strike">
+        <span class="label">本期標價</span>
+        <span class="value">NT$ 125,000</span>
+      </div>
+      <div class="hero-price-row discount">
+        <span class="label">完成候補問答立折</span>
+        <span class="value">− NT$ 5,000</span>
+      </div>
+      <div class="hero-price-row final">
+        <span class="label">你實際支付</span>
+        <span class="value"><span class="nt">NT$</span>120,000</span>
+      </div>
+    </div>
+
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">課程</span>
+        <span class="hero-meta-value">寵物溝通創業弟子班</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">招收狀態</span>
+        <span class="hero-meta-value red">已滿員 · 候補中</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">候補名額</span>
+        <span class="hero-meta-value">5 位（先申請先審）</span>
+      </div>
+    </div>
+
+    <!-- Notice Banner -->
+    <div class="notice">
+      <div class="notice-icon">❖</div>
+      <div class="notice-text">
+        <strong>本頁不公開。</strong>　這是你主動來找 Luna 之後才會收到的連結。下一期公開說明會時間未定，<strong>本期候補為目前唯一入學通道</strong>。
+      </div>
+    </div>
+
+    <!-- Waitlist explanation -->
+    <div class="waitlist-box">
+      <div class="waitlist-title">關於「候補」這件事</div>
+      <div class="waitlist-desc">
+        本期已經收滿，但弟子班是<strong>收徒制</strong>。Luna 會在正式開課前後進行適合度篩選，<strong>不合適的學員會被勸退、釋出名額</strong>。<br>
+        本期將釋出的彈性名額為 <strong>5 位</strong>，從候補名單依申請順序遞補。<br>
+        進入候補 ≠ 保證入班，但<strong>先申請先審、先審先補</strong>。
+      </div>
+    </div>
+
+    <div class="seal">候補<br>受徒</div>
+  </header>
+
+  <!-- ===== 1. 影片 ===== -->
+  <section>
+    <div class="section-header">
+      <div class="section-number">i</div>
+      <div class="section-title-block">
+        <div class="section-label">Step 01 · 先看這支影片</div>
+        <h2 class="section-title">完整說明會錄影</h2>
+      </div>
+    </div>
+
+    <p class="section-intro">
+      這是當天說明會的完整直播錄影（約 2 小時）。<br>
+      章節時間戳在影片下方，你可以跳到最感興趣的段落；<br>
+      如果時間有限，也可以直接看「五條重點摘要」掌握系統核心。
+    </p>
+
+    <div class="video-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/BhxAsnfYwXw?rel=0&modestbranding=1"
+        title="寵物溝通創業弟子班 · 說明會錄影"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <div class="video-note">※ 此為不公開影片，請勿外傳連結。</div>
+
+    <div class="chapters-title">◆ 章節時間戳 ◆</div>
+    <div class="chapters">
+      <div class="chapter-item"><span class="chapter-time">00:00</span><span class="chapter-name">留到最後送 5,000 元折價券｜開場</span></div>
+      <div class="chapter-item"><span class="chapter-time">02:27</span><span class="chapter-name">Luna 自我介紹｜營養師如何走上寵物溝通之路</span></div>
+      <div class="chapter-item"><span class="chapter-time">04:50</span><span class="chapter-name">什麼是他心通？跟市面寵物溝通的核心差異</span></div>
+      <div class="chapter-item"><span class="chapter-time">10:00</span><span class="chapter-name">真實戰績案例：離世宅配貓貓嘟嘟小姐、黑狗福福、萊恩、轉世貓</span></div>
+      <div class="chapter-item"><span class="chapter-time">18:53</span><span class="chapter-name">弟子班三大板塊：技能 × 商業變現 × 代理收入</span></div>
+      <div class="chapter-item"><span class="chapter-time">24:00</span><span class="chapter-name">課程規劃細節：文化課、打通任督二脈、實戰訓練、月訓、創業導師</span></div>
+      <div class="chapter-item"><span class="chapter-time">33:00</span><span class="chapter-name">五大實戰業務＋奇門遁甲找寵物獨家搭配</span></div>
+      <div class="chapter-item"><span class="chapter-time">43:52</span><span class="chapter-name">競品分析：一般寵物溝通師為何只有 6–7 成準確度</span></div>
+      <div class="chapter-item"><span class="chapter-time">50:13</span><span class="chapter-name">師承的差距｜HP vs MP：沒師承會耗命</span></div>
+      <div class="chapter-item"><span class="chapter-time">1:09:00</span><span class="chapter-name">三教九流與道家法術傳承的脈絡</span></div>
+      <div class="chapter-item"><span class="chapter-time">1:20:00</span><span class="chapter-name">為什麼道長講命不嚇人｜天道無情</span></div>
+      <div class="chapter-item"><span class="chapter-time">1:29:06</span><span class="chapter-name">Luna 創業故事：Threads 累積案例 3,000＋、三月變現 150 萬＋</span></div>
+      <div class="chapter-item"><span class="chapter-time">1:36:15</span><span class="chapter-name">學姐現身分享｜麻瓜變溝通師代表伃廷、七年溝通師在進修代表雅竹</span></div>
+      <div class="chapter-item"><span class="chapter-time">2:03:00</span><span class="chapter-name">兩小時總結</span></div>
+      <div class="chapter-item"><span class="chapter-time">2:05:30</span><span class="chapter-name">Q&amp;A｜修行 8 大禁忌</span></div>
+    </div>
+
+    <!-- Key Takeaways -->
+    <div class="takeaways">
+      <div class="takeaways-label">Key Takeaways</div>
+      <div class="takeaways-heading">五條重點摘要（給沒時間看完整支的你）</div>
+
+      <div class="takeaway-item">
+        <div class="takeaway-num">i.</div>
+        <div class="takeaway-text">
+          <strong>寵物溝通的本質是他心通，不是天賦。</strong>
+          這是一項可以被系統化訓練的能力。市面上的一般寵物溝通師多半只能做到 6–7 成準確度，差別就在這裡。
+        </div>
+      </div>
+
+      <div class="takeaway-item">
+        <div class="takeaway-num">ii.</div>
+        <div class="takeaway-text">
+          <strong>沒師承會耗命，HP 會被當成 MP 燒。</strong>
+          這是市面上最少人講、但最關鍵的一件事。沒有師承與練炁基礎的寵物溝通師，是用自己的命去換每一次訊息。
+        </div>
+      </div>
+
+      <div class="takeaway-item">
+        <div class="takeaway-num">iii.</div>
+        <div class="takeaway-text">
+          <strong>三大板塊：技能 × 商業變現 × 代理收入。</strong>
+          弟子班不只教技能，同時建立商業模式與代理機制，讓你不只是學一項能力，而是建構一個能持續帶來收入的結構。
+        </div>
+      </div>
+
+      <div class="takeaway-item">
+        <div class="takeaway-num">iv.</div>
+        <div class="takeaway-text">
+          <strong>五階段系統 ＋ 五大實戰業務。</strong>
+          從文化課、打通任督二脈、月訓，到五大實戰業務（寵物溝通／疾病／行為／離世／走失協尋）。奇門遁甲找寵物是獨家搭配，全市場目前僅此一家。
+        </div>
+      </div>
+
+      <div class="takeaway-item">
+        <div class="takeaway-num">v.</div>
+        <div class="takeaway-text">
+          <strong>收徒制 · 適合度篩選。</strong>
+          弟子班不是任何人都能加入，入班後 Luna 仍會篩選適合度。這套機制是在保護能長期穩定走下去的人，避免把不合適的人留下來互相消耗。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2. 為什麼是 Luna ===== -->
+  <section>
+    <div class="section-header">
+      <div class="section-number">ii</div>
+      <div class="section-title-block">
+        <div class="section-label">Step 02 · 師承與權威</div>
+        <h2 class="section-title">為什麼由 Luna 教</h2>
+      </div>
+    </div>
+
+    <p class="section-intro">
+      市面上教寵物溝通的老師不少，但帶有完整道家修行脈絡的，<br>
+      全台灣目前只有這一個系統。
+    </p>
+
+    <div class="authority-list">
+      <div class="authority-card">
+        <div class="authority-mark">— Lineage —</div>
+        <div class="authority-title">金瀾言卿道長門下大弟子</div>
+        <div class="authority-desc">
+          師承全真道龍門派第二十四代誠字輩，<br>
+          道長為異人研究院創辦人。
+        </div>
+      </div>
+      <div class="authority-card">
+        <div class="authority-mark">— Method —</div>
+        <div class="authority-title">以道家他心通為基礎的教學體系</div>
+        <div class="authority-desc">
+          全台灣唯一以道家修行建構的<br>
+          寵物溝通完整訓練系統。
+        </div>
+      </div>
+      <div class="authority-card">
+        <div class="authority-mark">— Record —</div>
+        <div class="authority-title">3,000＋ 免費案例實證</div>
+        <div class="authority-desc">
+          個人實戰累積，並訓練 80＋ 弟子，<br>
+          非單堂課、非紙上談兵。
+        </div>
+      </div>
+      <div class="authority-card">
+        <div class="authority-mark">— Journey —</div>
+        <div class="authority-title">從負債千萬到三個月變現 150 萬</div>
+        <div class="authority-desc">
+          這項技能本身救過 Luna 的人生，<br>
+          所以她知道它真的能救人。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. 弟子班教什麼 ===== -->
+  <section>
+    <div class="section-header">
+      <div class="section-number">iii</div>
+      <div class="section-title-block">
+        <div class="section-label">Step 03 · 教學體系</div>
+        <h2 class="section-title">弟子班在教什麼</h2>
+      </div>
+    </div>
+
+    <p class="section-intro">
+      整套課程分為五個階段，<br>
+      從修行基礎到實戰應用，層層遞進。<br>
+      不是感應技巧的堆疊，而是一套完整的能力建構路徑。
+    </p>
+
+    <div class="stages">
+      <div class="stage-row">
+        <div class="stage-num">i</div>
+        <div class="stage-body">
+          <div class="stage-label">Stage 01</div>
+          <div class="stage-title">文化課</div>
+          <div class="stage-content">
+            因果業力、道法觀念、業力矯正。<br>
+            這是整個系統的地基，<strong>清理業障，為後續修行做準備</strong>。
+          </div>
+        </div>
+      </div>
+
+      <div class="stage-row">
+        <div class="stage-num">ii</div>
+        <div class="stage-body">
+          <div class="stage-label">Stage 02</div>
+          <div class="stage-title">過功儀式</div>
+          <div class="stage-content">
+            過功符 ＋ 五雷符 ＋ 立意。<br>
+            建立「能與動物溝通」的能力權限。<strong>沒有過功，一切訓練都是空談</strong>。
+          </div>
+        </div>
+      </div>
+
+      <div class="stage-row">
+        <div class="stage-num">iii</div>
+        <div class="stage-body">
+          <div class="stage-label">Stage 03</div>
+          <div class="stage-title">練炁通絡</div>
+          <div class="stage-content">
+            打坐、練炁、通絡。<br>
+            建立穩定的能量通道。<strong>練炁決定職業壽命——沒練炁，越溝通越耗</strong>。
+          </div>
+        </div>
+      </div>
+
+      <div class="stage-row">
+        <div class="stage-num">iv</div>
+        <div class="stage-body">
+          <div class="stage-label">Stage 04</div>
+          <div class="stage-title">六感訓練</div>
+          <div class="stage-content">
+            視覺、聽覺、心覺、感覺的資訊接收訓練。<br>
+            這一段決定你未來的<strong>準確度</strong>。
+          </div>
+        </div>
+      </div>
+
+      <div class="stage-row">
+        <div class="stage-num">v</div>
+        <div class="stage-body">
+          <div class="stage-label">Stage 05</div>
+          <div class="stage-title">實戰應用 · 五大業務</div>
+          <div class="stage-content">
+            寵物溝通、疾病溝通、行為矯正、離世溝通、走失寵物協尋。<br>
+            搭配<strong>奇門遁甲找寵物</strong>，此為全市場獨家搭配。<strong>能不能接案，看這一階段</strong>。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Monthly Training -->
+    <div class="monthly">
+      <div class="monthly-eyebrow">— Ongoing Training —</div>
+      <div class="monthly-heading">每月月訓 · 弟子身份的持續價值</div>
+      <div class="monthly-intro">
+        弟子身份不只是一次性課程，而是一個<strong style="color: var(--vermillion);">能持續成長的專業社群</strong>。<br>
+        每月邀請不同領域的專業講師進行進階訓練，把你的技能與知識逐步拉到產業水準。
+      </div>
+
+      <div class="monthly-grid">
+        <div class="monthly-item">
+          <div class="monthly-item-title">獸醫師</div>
+          <div class="monthly-item-desc">動物生理與疾病基礎</div>
+        </div>
+        <div class="monthly-item">
+          <div class="monthly-item-title">訓練師</div>
+          <div class="monthly-item-desc">行為觀察與矯正實務</div>
+        </div>
+        <div class="monthly-item">
+          <div class="monthly-item-title">營養師</div>
+          <div class="monthly-item-desc">寵物營養學與飲食處方</div>
+        </div>
+        <div class="monthly-item">
+          <div class="monthly-item-title">貓行為諮詢師</div>
+          <div class="monthly-item-desc">貓科特殊行為議題</div>
+        </div>
+        <div class="monthly-item">
+          <div class="monthly-item-title">寵物業者</div>
+          <div class="monthly-item-desc">產業現場的實戰經驗</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. 適合 / 不適合 ===== -->
+  <section>
+    <div class="section-header">
+      <div class="section-number">iv</div>
+      <div class="section-title-block">
+        <div class="section-label">Step 04 · 篩選</div>
+        <h2 class="section-title">這套系統適合誰</h2>
+      </div>
+    </div>
+
+    <p class="section-intro">
+      弟子班不是每個人都能上。<br>
+      請誠實比對下方條件，<strong>不合適的情況下勉強入班，雙方都會痛苦</strong>。
+    </p>
+
+    <div class="fit-grid">
+      <div class="fit-box yes">
+        <div class="fit-mark">— Right Fit —</div>
+        <div class="fit-title">適合加入</div>
+        <ul class="fit-list">
+          <li>真正想把寵物溝通學成一項能長期發展的技能</li>
+          <li>願意將寵物溝通發展為副業或主業</li>
+          <li>能接受道家修行基礎（練炁、符籙、儀式）</li>
+          <li>具備自我要求與紀律，能跟上課程節奏</li>
+          <li>願意付出時間練習，不追求「速成」</li>
+        </ul>
+      </div>
+      <div class="fit-box no">
+        <div class="fit-mark">— Not Yet —</div>
+        <div class="fit-title">請先別來</div>
+        <ul class="fit-list">
+          <li>只是出於好奇、沒有明確學習目標</li>
+          <li>無法接受道家脈絡，只想學「感應技巧」</li>
+          <li>期待學完立刻接案變現、不願意紮實練習</li>
+          <li>無法跟上課程進度與修行紀律</li>
+          <li>目前的生活狀態無法負擔穩定投入的時間</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. 價格 ===== -->
+  <section>
+    <div class="section-header">
+      <div class="section-number">v</div>
+      <div class="section-title-block">
+        <div class="section-label">Step 05 · 價格與分期</div>
+        <h2 class="section-title">本期定價與分期</h2>
+      </div>
+    </div>
+
+    <div class="price-wrap">
+      <div class="price-eyebrow">Tuition · 本期</div>
+      <div class="price-label">寵物溝通創業弟子班 · 完整五階段系統</div>
+
+      <div class="price-stack">
+        <div class="price-stack-row strike">
+          <span class="label">本期標價</span>
+          <span class="value">NT$ 125,000</span>
+        </div>
+        <div class="price-stack-row discount">
+          <span class="label">完成候補問答立折 5,000</span>
+          <span class="value">− NT$ 5,000</span>
+        </div>
+        <div class="price-stack-row final">
+          <span class="label">你實際支付</span>
+          <span class="price-amount">
+            <span class="nt">NT$</span>120,000
+          </span>
+        </div>
+      </div>
+
+      <div class="price-methods">
+        <div class="method-card">
+          <div class="method-name">方案 A · 一次付清 120,000</div>
+          <div class="method-detail">
+            付款完成後，於<strong>交付八字測算資料前</strong>皆可全額退費。
+            <span class="method-region">◆ 台灣學員</span>
+            現金 ／ LINE PAY 刷卡
+            <span class="method-region">◆ 海外學員</span>
+            SKOOL 刷卡 ／ PayPal ／ 支付寶
+          </div>
+        </div>
+        <div class="method-card">
+          <div class="method-name">方案 B · 和潤無卡分期</div>
+          <div class="method-detail">
+            保證金 <strong>NT$ 10,000</strong> ＋ 分期本金 <strong>NT$ 110,000</strong>，<br>
+            可辦理 <strong>3 ～ 36 期</strong>，詳細月付金請見下方試算表。
+            <span class="method-region">◆ 僅限台灣學員</span>
+            和潤僅提供台灣本地金融服務
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Installment Table -->
+    <div class="install-wrap">
+      <div class="install-title-block">
+        <div class="lead">◆ 不同期數試算 ◆</div>
+        <div class="main">和潤無卡分期月付參考</div>
+      </div>
+      <div class="install-principal">
+        分期本金　<strong>NT$ 110,000</strong>　（實際學費 120,000 − 保證金 10,000）
+      </div>
+
+      <table class="install-table">
+        <thead>
+          <tr>
+            <th>分期期數</th>
+            <th>每期月付金</th>
+            <th>分期總額</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>3 期</td><td>$37,327</td><td>$111,980</td></tr>
+          <tr><td>6 期</td><td>$18,884</td><td>$113,300</td></tr>
+          <tr><td>9 期</td><td>$12,773</td><td>$114,950</td></tr>
+          <tr><td>12 期</td><td>$9,671</td><td>$116,050</td></tr>
+          <tr><td>18 期</td><td>$6,631</td><td>$119,350</td></tr>
+          <tr><td>24 期</td><td>$5,134</td><td>$123,200</td></tr>
+          <tr><td>30 期</td><td>$4,217</td><td>$126,500</td></tr>
+          <tr><td>36 期</td><td>$3,575</td><td>$128,700</td></tr>
+        </tbody>
+      </table>
+
+      <div class="install-note">
+        <strong>重要提醒：</strong>無卡分期的利息為固定，<strong>即使提前清償，剩餘的利息仍需照常支付</strong>。<br>
+        請在選擇期數時，務必確認這是你未來幾個月能舒適負擔的金額。<br>
+        <span style="font-size: 12px; color: var(--ink-faint);">※ 最後一期實際金額可能微幅調整，以和潤試算結果為準。</span>
+      </div>
+    </div>
+
+    <!-- Refund -->
+    <div class="refund-box">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--vermillion); margin-bottom: 6px;">◆ Refund Policy</div>
+      <div style="font-size: 19px; font-weight: 700; color: var(--ink);">退費政策的關鍵分界</div>
+      <p style="font-size: 15px; color: var(--ink-soft); line-height: 1.75; margin-top: 10px;">
+        整個流程裡，最重要的一個分界點是：<strong style="color: var(--vermillion);">學員是否已獲補入、完成付款、並交付八字測算資料。</strong>
+      </p>
+
+      <div class="refund-split">
+        <div class="refund-stage ok">
+          <div class="refund-status">◯ 尚未進入測算</div>
+          <div class="refund-name">候補階段 / 未啟動測算</div>
+          <div class="refund-desc">
+            候補階段你提供的資料<strong>暫存保護</strong>，<br>
+            尚未啟動測算，可<strong>全額退費</strong>。
+          </div>
+        </div>
+        <div class="refund-stage no">
+          <div class="refund-status">● 已進入測算</div>
+          <div class="refund-name">獲補入 ＋ 付款 ＋ 交付資料</div>
+          <div class="refund-desc">
+            完成上述三步後進入測算階段，<br>
+            <strong>不退費，僅可轉讓或延期。</strong>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size: 13px; color: var(--ink-faint); line-height: 1.7; margin-top: 18px; font-style: italic;">
+        ※ 分期方案特別說明：分期流程中「和潤審核通過」即等同進入測算階段。若和潤審核未過，保證金全額退回。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== 6. 候補流程 ===== -->
+  <section>
+    <div class="section-header">
+      <div class="section-number">vi</div>
+      <div class="section-title-block">
+        <div class="section-label">Step 06 · 候補流程</div>
+        <h2 class="section-title">從候補到入班</h2>
+      </div>
+    </div>
+
+    <p class="section-intro">
+      以下是完整的候補與入班路徑。<br>
+      看完影片與本頁，你對弟子班的理解應該已經非常完整——<br>
+      如果還有細節想釐清，私訊 Luna 即可，不需要預約一對一諮詢。
+    </p>
+
+    <div class="flow">
+      <div class="flow-item">
+        <div class="flow-dot">i</div>
+        <div class="flow-content">
+          <div class="flow-title">複製下方候補申請表單</div>
+          <div class="flow-desc">
+            在下一個區塊有一份可一鍵複製的候補表單。<br>
+            把欄位填完（兩題問答是必填）。
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-dot">ii</div>
+        <div class="flow-content">
+          <div class="flow-title">私訊 Luna 送出表單</div>
+          <div class="flow-desc">
+            把填完的表單貼進 LINE 傳給 Luna，<br>
+            完成<strong>候補申請 ＋ 領取 5,000 元折抵</strong>。
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-dot">iii</div>
+        <div class="flow-content">
+          <div class="flow-title">候補登記確認</div>
+          <div class="flow-desc">
+            Luna 確認表單完整後，<strong>正式登記進本期候補名單</strong>，依申請順序排序。<br>
+            此時折抵 5,000 同步鎖定。
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-dot">iv</div>
+        <div class="flow-content">
+          <div class="flow-title">候補審核 · 通知補入</div>
+          <div class="flow-desc">
+            本期開課前後進行適合度篩選，有釋出名額時 Luna 會依順序通知候補者。<br>
+            名額<strong>僅 5 位</strong>，先申請者先審。
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-item">
+        <div class="flow-dot">v</div>
+        <div class="flow-content">
+          <div class="flow-title">獲補入 · 完成付款</div>
+          <div class="flow-desc">
+            確認補入後完成付款：<br>
+            方案 A — 一次付清 120,000（台灣現金 / LINE PAY；海外 SKOOL / PayPal / 支付寶）<br>
+            方案 B — 保證金 1 萬 ＋ 和潤分期本金 11 萬。
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-item final">
+        <div class="flow-dot">vi</div>
+        <div class="flow-content">
+          <div class="flow-title">啟動測算 · 進入教學</div>
+          <div class="flow-desc">
+            付款完成後，Luna 正式啟動八字測算。<strong>此刻起不再退費。</strong><br>
+            30 天內交付測算報告（平均兩週），並排定課程進度。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. 候補申請表單 ===== -->
+  <section>
+    <div class="section-header">
+      <div class="section-number">vii</div>
+      <div class="section-title-block">
+        <div class="section-label">Step 07 · 候補申請</div>
+        <h2 class="section-title">填寫候補表單 · 領取折抵</h2>
+      </div>
+    </div>
+
+    <!-- Coupon Highlight -->
+    <div class="coupon-box">
+      <div class="coupon-eyebrow">— The Offer —</div>
+      <h3 class="coupon-title">完成候補問答<br>立即折抵 NT$ 5,000</h3>
+
+      <div class="coupon-calc">
+        <div class="coupon-calc-cell">
+          <div class="coupon-calc-label">本期標價</div>
+          <div class="coupon-calc-value strike">125,000</div>
+        </div>
+        <div class="coupon-calc-op">−</div>
+        <div class="coupon-calc-cell">
+          <div class="coupon-calc-label">候補問答折抵</div>
+          <div class="coupon-calc-value">5,000</div>
+        </div>
+        <div class="coupon-calc-op">=</div>
+        <div class="coupon-calc-cell">
+          <div class="coupon-calc-label">你實際支付</div>
+          <div class="coupon-calc-value highlight">120,000</div>
+        </div>
+      </div>
+
+      <p class="coupon-how">
+        這 5,000 元的折抵<strong>並不是促銷手段</strong>——<br>
+        而是因為 Luna 想知道你為什麼想學、為什麼找 Luna 當老師。<br>
+        你認真回答的這兩個問題，同時也是你第一次與 Luna 建立<strong>師徒連結的起點</strong>。
+      </p>
+    </div>
+
+    <p class="section-intro">
+      複製下方表單，填寫完整後私訊給 Luna。<br>
+      只有完成表單送出的人，才會被正式登記進本期候補名單並鎖定 5,000 折抵。
+    </p>
+
+    <!-- Form Copy Block -->
+    <div class="form-wrap">
+      <div class="form-header">
+        <div class="form-header-title">
+          寵物溝通創業弟子班・候補申請表單
+          <span class="sub">— Application Form —</span>
+        </div>
+        <button class="copy-btn" id="copyFormBtn" onclick="copyForm(this)">複製全部</button>
+      </div>
+
+      <pre class="form-body" id="formContent">【寵物溝通創業弟子班・候補申請】
+
+◆ 基本資料
+姓名：
+出生年月日（西元 yyyy/mm/dd）：
+出生時間（24 小時制，hh:mm）：
+出生地：
+居住地：
+MBTI：
+
+◆ 背景簡述
+玄學經驗（曾學過的法門、無經驗亦可寫「無」）：
+相關病史（若有身心狀況需 Luna 調整入門方式，選填）：
+
+◆ 對帳參考（選填）
+匯款帳號末 5 碼（未來付款對帳使用）：
+
+◆ 候補問答（必填・完成即享 NT$ 5,000 折抵）
+
+Q1. 你為什麼想要跟 Luna 學習寵物溝通？為什麼想找 Luna 當老師？
+→
+
+Q2. 你想要學習寵物溝通的具體原因是什麼？
+→
+
+—
+提交方式：複製全文 → 私訊 Luna LINE
+本期候補名額 5 位，先申請先審。</pre>
+
+      <div class="form-note">
+        <strong>小提示：</strong>按右上「複製全部」→ 貼到 LINE → 直接在每個欄位後面填寫即可。兩題問答是必填，其餘欄位如有不清楚的地方可以空著，之後再補。
+      </div>
+    </div>
+
+    <!-- Data Safety Box -->
+    <div class="data-safety">
+      <div class="data-safety-label">◆ Data & Refund Note</div>
+      <div class="data-safety-title">候補階段交付資料 ≠ 進入測算階段</div>
+      <div class="data-safety-desc">
+        你在候補階段提供的八字與個資，<strong>僅作為候補登記與適合度參考</strong>，尚未啟動測算服務。<br>
+        只有在你獲得補入、完成付款後，Luna 才會正式啟動八字測算——此時才進入不退費階段。<br>
+        在此之前你可以隨時撤銷候補申請，提交的資料不會被用於任何其他目的。
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 8. FAQ ===== -->
+  <section>
+    <div class="section-header">
+      <div class="section-number">viii</div>
+      <div class="section-title-block">
+        <div class="section-label">Step 08 · 常見問題</div>
+        <h2 class="section-title">幾個你可能會問的問題</h2>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-mark">Q.</span>
+        <span>「候補」是什麼意思？進入候補名單就一定會上嗎？</span>
+      </div>
+      <div class="faq-a">
+        本期已收滿，但弟子班是收徒制，Luna 會在入班後篩選適合度，<strong>不合適的學員會被勸退、釋出名額</strong>。本期將釋出的彈性名額為 <strong>5 位</strong>，從候補名單依申請順序遞補。<br>
+        <strong>進入候補 ≠ 保證入班。</strong>但先申請的人會優先被審核，先補先入。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-mark">Q.</span>
+        <span>那兩題候補問答會用來做什麼？</span>
+      </div>
+      <div class="faq-a">
+        這兩題是 Luna 篩選適合度的主要依據。<strong>認真回答的人會被優先審核</strong>，隨便寫的會被直接放到後段。<br>
+        這不是考試、沒有標準答案——Luna 想看的是你對這項技能、對師徒關係的真實態度。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-mark">Q.</span>
+        <span>下一次公開說明會是什麼時候？我可以等嗎？</span>
+      </div>
+      <div class="faq-a">
+        <strong>下一期說明會時間目前未定。</strong>如果你現在已經想好要上，建議直接加入候補，不然要等不確定時間的下一期。<br>
+        本期候補為目前唯一入學通道。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-mark">Q.</span>
+        <span>表單裡的個資會不會被怎樣處理？</span>
+      </div>
+      <div class="faq-a">
+        候補階段你提供的資料<strong>僅作為候補登記與適合度評估使用</strong>，尚未啟動測算服務。只有在你獲補入並完成付款後，Luna 才會正式啟動八字測算。<br>
+        在此之前你可以隨時撤銷候補，提交的資料不會被用於任何其他目的。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-mark">Q.</span>
+        <span>我完全沒有靈性或修行基礎，這樣可以學嗎？</span>
+      </div>
+      <div class="faq-a">
+        可以。<strong>弟子班的設計就是讓麻瓜入門</strong>。你不需要會任何前置技巧，也不需要先會打坐或通靈——整套系統從文化課開始逐步建立基礎。需要的不是資質，是願不願意照流程走。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-mark">Q.</span>
+        <span>每月月訓是什麼？會額外收費嗎？</span>
+      </div>
+      <div class="faq-a">
+        月訓是弟子身份的持續資源，<strong>不另外收費</strong>。每月邀請獸醫師、訓練師、營養師、貓行為諮詢師、寵物業者進行進階訓練，讓你的技能與知識持續擴張，而不是學完就結束。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-mark">Q.</span>
+        <span>分期的月付金大概多少？</span>
+      </div>
+      <div class="faq-a">
+        詳細試算請見上方分期表。和潤無卡分期可辦理 <strong>3 ～ 36 期</strong>，月付金從 $3,575（36 期）到 $37,327（3 期）不等。<br>
+        提醒：和潤分期<strong>即使提前清償，剩餘利息仍需支付</strong>，請以長期能舒適負擔的金額為準。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-mark">Q.</span>
+        <span>如果和潤分期審核沒過，怎麼辦？</span>
+      </div>
+      <div class="faq-a">
+        和潤審核若未通過，<strong>保證金 1 萬元全額退回</strong>，此時因為尚未進行測算，沒有任何損失。你也可以選擇改走一次付清方案繼續報名。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">
+        <span class="faq-q-mark">Q.</span>
+        <span>我沒有養寵物，可以學寵物溝通嗎？</span>
+      </div>
+      <div class="faq-a">
+        可以。實戰練習可以透過其他學員或朋友的毛孩進行，<strong>沒有自家寵物不影響學習</strong>。但建議你誠實思考動機——這項技能會伴隨你一輩子的修行與事業，不是短期體驗。
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <div class="cta-wrap">
+    <div class="cta-eyebrow">Join the Waitlist</div>
+    <h2 class="cta-title">
+      複製表單，<br>
+      送出給 Luna。
+    </h2>
+    <p class="cta-desc">
+      完成候補表單 ＋ 兩題問答 ＋ 私訊給 Luna，<br>
+      即登記進本期候補名單並鎖定 <strong>NT$ 5,000 折抵</strong>。<br>
+      名額僅 5 位，先申請先審。
+    </p>
+
+    <a href="https://line.me/ti/p/@lunalove520" class="cta-button" target="_blank" rel="noopener">
+      私訊 Luna 送出表單 ▸
+    </a>
+
+    <div class="cta-note">
+      ※ 先申請者優先審核，不代表一定會被補入。
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-mark">— 結 —</div>
+    <p class="footer-text">
+      這是一堂收徒制課程。<br>
+      我希望加入的，都是想清楚的人。
+    </p>
+    <div class="footer-version">LUNA · 寵物溝通創業弟子班 · 候補說明頁 v.3</div>
+  </footer>
+
+</div>
+
+<script>
+  function copyForm(btn) {
+    const content = document.getElementById('formContent').textContent;
+    const originalText = btn.textContent;
+
+    function onSuccess() {
+      btn.textContent = '已複製 ✓';
+      btn.classList.add('copied');
+      setTimeout(function() {
+        btn.textContent = originalText;
+        btn.classList.remove('copied');
+      }, 2500);
+    }
+
+    function onFail() {
+      btn.textContent = '請手動複製';
+      setTimeout(function() { btn.textContent = originalText; }, 2500);
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(content).then(onSuccess).catch(function() {
+        // fallback
+        fallbackCopy(content) ? onSuccess() : onFail();
+      });
+    } else {
+      fallbackCopy(content) ? onSuccess() : onFail();
+    }
+  }
+
+  function fallbackCopy(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+    textarea.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(textarea);
+    return ok;
+  }
+</script>
+
+</body>
+</html>
